@@ -48,6 +48,13 @@ jobs:
         TF_VAR_project_name: ${{ secrets.PROJECT_NAME }}
         TF_VAR_environment: ${{ secrets.ENVIRONMENT }}
 
+    - name: Check if Deployment is Paused
+      run: |
+        if [[ "${{ secrets.DEPLOYMENT_PAUSED }}" == "true" ]]; then
+          echo "🚨 Deployments are paused. Skipping Terraform Apply."
+          exit 1
+        fi
+
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve
