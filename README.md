@@ -2,7 +2,7 @@
 
 A production-ready multi-cloud infrastructure implementation using Terraform, spanning AWS, Azure, and GCP with automated failover, monitoring, and CI/CD integration.
 
-[![Infrastructure Tests](https://github.com/yourusername/multi-cloud-terraform/actions/workflows/terraform.yml/badge.svg)](https://github.com/yourusername/multi-cloud-terraform/actions/workflows/terraform.yml)
+[![Infrastructure Tests](https://github.com/codecat1111/multi-cloud-terraform/actions/workflows/terraform.yml/badge.svg)](https://github.com/codecat1111/multi-cloud-terraform/actions/workflows/terraform.yml)
 
 ## 🌟 Features
 
