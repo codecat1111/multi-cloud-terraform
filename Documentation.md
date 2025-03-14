@@ -1,10 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-# 
-
----
-
-# Multi-Cloud Infrastructure Project: 6-Hour Implementation Guide
+# Multi-Cloud Infrastructure Project
 
 A comprehensive guide for deploying a resilient multi-cloud infrastructure across AWS, Azure, and GCP using Terraform, with automated failover, monitoring, and CI/CD integration.
 
@@ -37,7 +31,7 @@ Before beginning this implementation, ensure you have the following:
 - Basic understanding of networking concepts and cloud provider services
 
 
-## Phase 1: Foundation (Hours 1-2)
+## Phase 1: Foundation
 
 This initial phase focuses on establishing the basic infrastructure and connectivity between cloud providers.
 
@@ -286,7 +280,7 @@ resource "azurerm_virtual_network_gateway" "vpn_gw" {
 ```
 
 
-## Phase 2: Core Infrastructure (Hours 3-4)
+## Phase 2: Core Infrastructure 
 
 This phase builds upon the foundation by deploying compute resources, implementing load balancers, and configuring DNS for failover.
 
@@ -780,9 +774,65 @@ resource "aws_route53_record" "global_gcp" {
 ```
 
 
-## Phase 3: Automation and Demonstration (Hours 5-6)
+## Phase 3: Automation and Demonstration
 
 In this final phase, we focus on automating deployments and setting up monitoring for our multi-cloud infrastructure.
+
+### 1. CI/CD Pipeline Setup
+
+We've implemented a GitHub Actions workflow for automated deployments:
+- Triggers on push to main branch and pull requests
+- Configures credentials for all three cloud providers
+- Runs Terraform init, plan, and apply
+- Uses environment secrets for sensitive data
+
+### 2. Monitoring and Alerting
+
+Monitoring is implemented across all cloud providers:
+
+#### AWS CloudWatch
+- CPU utilization monitoring for EC2 instances
+- Automatic alerts when CPU exceeds 80%
+- Integration with SNS for notifications
+
+#### Azure Monitor
+- VM Scale Set monitoring
+- CPU percentage tracking
+- Metric alerts for high resource usage
+
+#### Google Cloud Monitoring
+- Instance CPU utilization tracking
+- Custom alert policies
+- Notification channel integration
+
+### 3. Demonstration Scripts
+
+A demonstration script (scripts/demo.sh) showcases:
+- Health checks across all cloud endpoints
+- Load distribution simulation
+- Failover scenario testing
+
+### 4. Infrastructure Validation
+
+To validate the infrastructure:
+1. Run the GitHub Actions workflow
+2. Monitor deployment across all providers
+3. Execute the demo script to test functionality
+4. Verify monitoring alerts in each cloud console
+
+### 5. Best Practices
+
+- Use environment variables for sensitive data
+- Regular monitoring of resource usage
+- Implement proper logging across all providers
+- Maintain documentation of deployment processes
+
+### 6. Next Steps
+
+- Set up additional monitoring metrics
+- Implement cost optimization
+- Add more sophisticated failover scenarios
+- Enhance security monitoring
 
 ### Setting Up GitHub Repository with CI/CD
 
