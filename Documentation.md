@@ -84,7 +84,7 @@ graph TB
     end
 
     U[Users] --> A6
-
+```
 ## Phase 1: Foundation
 
 This initial phase focuses on establishing the basic infrastructure and connectivity between cloud providers.
