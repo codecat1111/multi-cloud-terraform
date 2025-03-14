@@ -1,6 +1,6 @@
-# Multi-Cloud Infrastructure Project
+# Multi-Cloud Infrastructure Project : Documentation
 
-A comprehensive guide for deploying a resilient multi-cloud infrastructure across AWS, Azure, and GCP using Terraform, with automated failover, monitoring, and CI/CD integration.
+A comprehensive documentation for deploying a resilient multi-cloud infrastructure across AWS, Azure, and GCP using Terraform, with automated failover, monitoring, and CI/CD integration.
 
 ## Introduction
 
