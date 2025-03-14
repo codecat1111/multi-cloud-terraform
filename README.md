@@ -51,4 +51,4 @@ Detailed documentation is available in our [Documentation Guide](Documentation.m
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/multi-cloud-terraform.git
+git clone https://github.com/codecat1111/multi-cloud-terraform.git
